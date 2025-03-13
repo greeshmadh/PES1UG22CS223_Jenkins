@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     build 'PES1UG22CS223-1'
-                    sh 'g++ main.cpp -o output'
+                    sh 'g++ -wrongflag main.cpp -o output'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('Deployy') {
+        stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
             }
